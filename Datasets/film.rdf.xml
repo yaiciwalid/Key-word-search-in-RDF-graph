@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:dbp="http://dbpedia.org/property/"
+	xmlns:dbo="http://dbpedia.org/ontology/" >
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Camp_Rock">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Film" />
+    <dbp:title xml:lang="en">Camp Rock</dbp:title>
+    <dbo:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-06-20</dbo:releaseDate>
+    <dbo:director rdf:resource="http://dbpedia.org/resource/Matthew_Diamond" />
+    <dbo:starring rdf:resource="http://dbpedia.org/resource/Daniel_Fathers" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Pterodactyl_(film)">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Film" />
+    <dbp:title xml:lang="en">Pterodactyl</dbp:title>
+    <dbo:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2005-08-27</dbo:releaseDate>
+    <dbo:director rdf:resource="http://dbpedia.org/resource/Mark_L._Lester" />
+    <dbo:starring rdf:resource="http://dbpedia.org/resource/Mircea_Monroe" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Ma_femme_s&#39;appelle_Maurice">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Film" />
+    <dbp:title xml:lang="en">Ma femme s&#39;appelle Maurice</dbp:title>
+    <dbo:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2002-09-25</dbo:releaseDate>
+    <dbo:director rdf:resource="http://dbpedia.org/resource/Jean-Marie_Poiré" />
+    <dbo:starring rdf:resource="http://dbpedia.org/resource/Guy_Marchand" />
+    <dbo:starring rdf:resource="http://dbpedia.org/resource/Régis_Laspalès" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Becoming_Human">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Film" />
+    <dbp:title rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</dbp:title>
+    <dbo:releaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-01-26</dbo:releaseDate>
+    <dbo:director rdf:resource="http://dbpedia.org/resource/Alex_Kalymnios" />
+    <dbo:starring rdf:resource="http://dbpedia.org/resource/Josh_Brown_(actor)" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Josh_Brown_(actor)">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Actor" />
+    <dbp:name xml:lang="en">Josh Brown</dbp:name>
+    <dbo:birthDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1990-02-19</dbo:birthDate>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Régis_Laspalès">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Actor" />
+    <dbp:name xml:lang="en">Régis Laspalès</dbp:name>
+    <dbo:birthDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1957-02-25</dbo:birthDate>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Mircea_Monroe">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Actor" />
+    <dbp:name xml:lang="en">Mircea Monroe</dbp:name>
+    <dbo:birthDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1982-03-11</dbo:birthDate>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Daniel_Fathers">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Actor" />
+    <dbp:name xml:lang="en">Daniel Fathers</dbp:name>
+    <dbo:birthDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1966-03-23</dbo:birthDate>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Guy_Marchand">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Actor" />
+    <dbp:name xml:lang="en">Guy Marchand</dbp:name>
+    <dbo:birthDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1937-05-22</dbo:birthDate>
+  </rdf:Description>
+</rdf:RDF>

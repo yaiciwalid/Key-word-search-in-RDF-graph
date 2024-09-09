@@ -1,0 +1,101 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:dbo="http://dbpedia.org/ontology/"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Harry_Potter_">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Book"/>
+    <dbo:author rdf:resource="http://dbpedia.org/resource/J._K._Rowling"/>
+    <dbo:publisher rdf:resource="http://dbpedia.org/resource/Bloomsbury_Publishing"/>
+    <dbo:publishingDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1997-06-26</dbo:publishingDate>
+    <foaf:title>Harry Potter and the Philosopher's Stone</foaf:title>
+ </rdf:Description>
+
+  <rdf:Description rdf:about="http://dbpedia.org/resource/J._K._Rowling">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Writer"/>
+    <foaf:Authorname>J. K. Rowling</foaf:Authorname>
+    <dbo:dateofbirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1965-07-31</dbo:dateofbirth>
+ </rdf:Description>
+
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Bloomsbury_Publishing">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/BookPublisher"/>
+    <foaf:publisherName>Bloomsbury Publishing</foaf:publisherName>
+ </rdf:Description>
+
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Game_of_Thrones">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Book"/>
+    <dbo:author rdf:resource="http://dbpedia.org/resource/George_R._R._Martin"/>
+    <dbo:publisher rdf:resource="http://dbpedia.org/resource/Bantam_Books"/>
+    <dbo:publishingDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1996-08-06</dbo:publishingDate>
+    <foaf:title>Game of Thrones</foaf:title>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://dbpedia.org/resource/George_R._R._Martin">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Writer"/>
+    <foaf:Authorname>George R. R. Martin</foaf:Authorname>
+    <dbo:dateofbirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1948-09-20</dbo:dateofbirth>
+ </rdf:Description>
+
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Bantam_Books">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/BookPublisher"/>
+    <foaf:publisherName>Bantam Books</foaf:publisherName>
+ </rdf:Description>
+
+  <rdf:Description rdf:about="http://dbpedia.org/resource/The_Lord_of_the_Rings:_The_Fellowship_of_the_Ring">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Book"/>
+    <dbo:author rdf:resource="http://dbpedia.org/resource/J._R._R._Tolkien"/>
+    <dbo:publisher rdf:resource="http://dbpedia.org/resource/George_Allen_and_Unwin"/>
+    <dbo:publishingDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1954-07-29</dbo:publishingDate>
+    <foaf:title>The Lord of the Rings: The Fellowship of the Ring</foaf:title>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://dbpedia.org/resource/J._R._R._Tolkien">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Writer"/>
+    <foaf:Authorname>J. R. R. Tolkien</foaf:Authorname>
+    <dbo:dateofbirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1892-01-03</dbo:dateofbirth>
+ </rdf:Description>
+
+  <rdf:Description rdf:about="http://dbpedia.org/resource/George_Allen_and_Unwin">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/BookPublisher"/>
+    <foaf:publisherName>George Allen and Unwin</foaf:publisherName>
+ </rdf:Description>
+
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Pride_">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Book"/>
+    <dbo:author rdf:resource="http://dbpedia.org/resource/Jane_Austen"/>
+    <dbo:publisher rdf:resource="http://dbpedia.org/resource/Thomas_Egerton_(publisher)"/>
+    <dbo:publishingDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1813-01-28</dbo:publishingDate>
+    <foaf:title>Pride and Prejudice</foaf:title>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Jane_Austen">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Writer"/>
+    <foaf:Authorname>Jane Austen</foaf:Authorname>
+    <dbo:dateofbirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1775-12-16</dbo:dateofbirth>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Thomas_Egerton_(publisher)">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/BookPublisher"/>
+    <foaf:publisherName>Thomas Egerton (publisher)</foaf:publisherName>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Adventures_of_Huckleberry_Finn">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Book"/>
+    <dbo:author rdf:resource="http://dbpedia.org/resource/Mark_Twain"/>
+    <dbo:publisher rdf:resource="http://dbpedia.org/resource/Charles_L._Webster_and_Co."/>
+    <dbo:publishingDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1885-12-10</dbo:publishingDate>
+    <foaf:title>The Adventures of Huckleberry Finn</foaf:title>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Mark_Twain">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Writer"/>
+    <foaf:Authorname>Mark Twain</foaf:Authorname>
+    <dbo:dateofbirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1835-11-30</dbo:dateofbirth>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Charles_L._Webster_and_Co.">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/BookPublisher"/>
+    <foaf:publisherName>Charles L. Webster and Co.</foaf:publisherName>
+  </rdf:Description>
+
+</rdf:RDF>
