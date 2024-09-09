@@ -1,5 +1,7 @@
 import networkx as nx
 import re
+import plotly.graph_objects as go
+import streamlit as st
 
 
 def rdf_to_nx_graph(rdf_graph):
@@ -232,6 +234,8 @@ def produit_cartesien(graphs_kw):
             list_dicts.append(keyword['predicates_kw'])
 
     combinations = []
+    if len(list_dicts)==0: return []
+
     list_ind = [0 for i in range(len(list_dicts))]
     stop = False
     while not stop:
@@ -260,3 +264,102 @@ def ranking(nx_kw, nx_result):
     N = len(nx_result.nodes()) + len(nx_result.edges())
     A = len(nx_kw.nodes()) + len(nx_kw.edges())
     return A/N
+
+def draw_graph_plotly(G):
+
+    pos = nx.spring_layout(G)
+
+    node_x = [pos[node][0] for node in G.nodes()]
+    node_y = [pos[node][1] for node in G.nodes()]
+    node_text_brieve = []
+    node_text = []
+    for i in G.nodes():
+        node_text_brieve.append(str(i).split(('/'))[-1])
+        node_text.append(str(i))
+    edge_text_brieve = [str(edge[2]['type']).split('/')[-1][:10]
+                        for edge in G.edges(data=True)]
+    edge_text = [str(edge[2]['type']) for edge in G.edges(data=True)]
+
+    # Create edges
+    edge_trace = go.Scatter(
+        x=[],
+        y=[],
+        line=dict(width=0.5, color='#888'),
+        hoverinfo='text',
+        mode='lines')
+
+    for edge in G.edges():
+        x0, y0 = pos[edge[0]]
+        x1, y1 = pos[edge[1]]
+        edge_trace['x'] += tuple([x0, x1, None])
+        edge_trace['y'] += tuple([y0, y1, None])
+
+    # Add edge weights
+    edge_trace.text = edge_text_brieve
+
+    # Create middle point coordinates for edge text
+    edge_text_trace = go.Scatter(
+        x=[(pos[edge[0]][0] + pos[edge[1]][0]) / 2 for edge in G.edges()],
+        y=[(pos[edge[0]][1] + pos[edge[1]][1]) / 2 for edge in G.edges()],
+        text=edge_trace.text,
+        mode='text',
+        hoverinfo='text',
+        hovertext=edge_text,
+        textposition='top center'
+    )
+
+    # Create nodes
+    node_trace = go.Scatter(
+        x=node_x,
+        y=node_y,
+        mode='markers+text',
+        hoverinfo='text',
+        text=node_text_brieve,
+        hovertext=node_text,
+        textposition='bottom center',
+        marker=dict(
+            showscale=True,
+            colorscale='YlGnBu',
+            size=10,
+            colorbar=dict(
+                thickness=15,
+                title='Node Connections',
+                xanchor='left',
+                titleside='right'
+            ),
+            line=dict(width=2)
+        )
+    )
+
+    # Create the figure
+    fig = go.Figure(data=[edge_trace, edge_text_trace, node_trace],
+                    layout=go.Layout(
+                        showlegend=False,
+                        hovermode='closest',
+                        margin=dict(b=0, l=0, r=0, t=0),
+                        xaxis=dict(showgrid=False, zeroline=False,
+                                   showticklabels=False),
+                        yaxis=dict(showgrid=False, zeroline=False,
+                                   showticklabels=False)
+                    ))
+
+    # Show the plot
+    st.plotly_chart(fig)
+
+
+def draw_hist(data):
+
+    sorted_data = sorted(data, key=lambda x: x['rank'], reverse=True)
+
+    top_10_combinations = sorted_data[:10]
+
+    combinations = [item['combinaison'] for item in top_10_combinations]
+    ranks = [item['rank'] for item in top_10_combinations]
+
+    fig = go.Figure([go.Bar(x=combinations, y=ranks)])
+
+    fig.update_layout(title='Top 10 Combinations by Rank',
+                      xaxis_title='Combination',
+                      yaxis_title='Rank')
+
+    st.plotly_chart(fig)
