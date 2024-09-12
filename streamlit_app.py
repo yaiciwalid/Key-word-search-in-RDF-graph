@@ -4,12 +4,12 @@ from xml.dom import minidom
 from utils import rdf_to_nx_graph, search_in_rdf_graph, graph_mots_cle, \
     graph_construct, produit_cartesien, ranking, draw_graph_plotly, draw_hist
 import os
-from openai import OpenAI
+from groq import Groq
+api_key = st.secrets["llama_secret_key"]
 
-os.environ['OPENAI_API_KEY'] = ""
-
-client = OpenAI()
-
+client = Groq(
+    api_key=api_key,
+)
 # Predefined datasets and ontologies (for dropdown options)
 default_datasets = {
     "Books Dataset": "./Datasets/livres.rdf.xml",

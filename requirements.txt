@@ -3,4 +3,4 @@ networkx
 matplotlib
 rdflib
 plotly
-openai
+groq

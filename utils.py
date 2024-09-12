@@ -48,7 +48,7 @@ def search_in_rdf_graph(graph, keywords, client, rdf_text, ontologie=None):
                     keyword = keywords[i]
                     syn = False
             else:
-                keyword = None #synonyme(keyword, client, text=rdf_text, ontology=ontologie)
+                keyword = synonyme(keyword, client, text=rdf_text, ontology=ontologie)
                 syn = True
                 if keyword is None:
                     result.append(selected_elements)
@@ -92,7 +92,7 @@ def synonyme(keyword, client, text=None, ontology=None):
             """.format(str(context), keyword)
     messages = [{"role": "user", "content": prompt_template}]
     response = client.chat.completions.create(
-        model="gpt-3.5-turbo",
+        model="llama-3.1-70b-versatile",
         messages=messages,
         temperature=0
     )
